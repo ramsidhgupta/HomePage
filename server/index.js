@@ -4,10 +4,16 @@ const cors = require('cors');
 const nodemailer = require("nodemailer");
 const path = require("path");
 const app = express();
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
+
+
+const portserver = process.env.PORT || 3001
+const mailG = process.env.EMAIL_USER
+const passG =  process.env.EMAIL_PASS
 
 
 const storage = multer.diskStorage({
@@ -94,8 +100,8 @@ app.post(
       port: 465,
       secure: true,
       auth: {
-        user: "ramsidhgupta@gmail.com",
-        pass: "jsif fcpf dzge dlad",
+        user: mailG,
+        pass: passG,
       },
     });
 
@@ -147,8 +153,8 @@ app.post(
       port: 465,
       secure: true,
       auth: {
-        user: "ramsidhgupta@gmail.com",
-        pass: "jsif fcpf dzge dlad",
+        user: mailG,
+        pass: passG,
       },
     });
 
@@ -178,13 +184,6 @@ app.post(
   }
 );
 
-
-
-
-
-
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(portserver, () => {
+  console.log(`Server is running on port ${portserver}`);
 });
