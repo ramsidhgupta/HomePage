@@ -1,0 +1,265 @@
+.testimonials-clean h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+  }
+  
+  @media (max-width:767px) {
+    .testimonials-clean h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+  }
+  
+   .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto;
+    margin-bottom:0;
+  }
+  
+  
+  
+  .testimonials-clean .people {
+    padding:0px 0 10px;
+  }
+  
+  .testimonials-clean .item {
+    margin-bottom:32px;
+  }
+  
+  @media (min-width:768px) {
+    .testimonials-clean .item {
+      height:520px;
+    }
+  }
+  
+.box {
+    margin-left:0rem;
+    width:35vw;
+    padding:10px;
+    background-color:#fff;
+    position:relative;
+    margin-bottom:3px;
+    margin-top: 3px;
+    border-radius: 20px;
+    opacity:0;
+  }
+  
+  @keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(55px);
+    }
+  
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+  }
+  .animate-box {
+    animation: animate 1s ease-in-out 1 forwards;
+  }
+  I
+
+
+
+
+.box:after {
+    content:'';
+    position:absolute;
+    left:75px;
+    bottom:-24px;
+    width: 2px;
+    height: 2px;
+    border:20px solid transparent;
+    border-width:12px 16px;
+    border-top-color:#fff;
+
+  }
+  
+ .author {
+    margin-top:18px;
+    margin-bottom: 18px;
+    padding-left:5px;
+  }
+
+  
+  .item .name {
+    font-weight:bold;
+    margin-bottom:2px;
+    color:inherit;
+  }
+  
+  
+  
+  .item .description {
+    font-size:18px;
+    margin-bottom:0;
+  }
+  
+  
+  /* img {
+    max-width:40px;
+    margin-right:20px;
+    margin-top:5px;
+
+  } */
+  
+
+  .people{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .card-footer{
+    width:100vw;
+    position:relative!important;
+    background-color:transparent;
+  }
+
+  .app-container {
+    position: relative;
+  }
+  
+  .blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/office.jpg'); /* Specify your background image */
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  
+
+
+  .skill-box {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  
+  .skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .skill-box .skill-bar{
+    height: 5px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 1rem;
+    background: rgba(0,0, 0, 0.1);
+  }
+  
+  .skill-box .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 95%;
+    border-radius: 6px;
+    background: crimson;
+    /* animation: progress 0.8s ease-in-out forwards;  */
+    opacity: 0;
+  }
+  
+  .skill-per.css {
+    width: 100%;
+    animation-delay: 0.1s;
+  }
+  
+  .skill-per.javascript{
+    width: 90%;
+    animation-delay: 0.2s;
+  }
+  .skill-per.nodejs{
+    width: 95%;
+    animation-delay: 0.3s;
+  }
+  .skill-per.reactjs{
+    width: 90%;
+    animation-delay: 0.3s;
+  }
+  .skill-per.expressjs{
+    width: 85%;
+    animation-delay: 0.3s;
+  }
+  
+  .skill-per.culture{
+    width: 90%;
+    animation-delay: 0.4s;
+  }
+  .skill-per.promotion{
+    width: 85%;
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes progress {
+    0% {
+        width: 0;
+        filter: blur(10px);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  .progressBar {
+    animation: progress 0.9s ease-in-out forwards;
+  }
+  .skill-per .tooltip1{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: crimson;
+    z-index: 1;
+  }
+  
+  .tooltip1::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: crimson;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  
+  .img-container {
+    text-align: center;
+  }
+  
+  .img-container img {
+
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid transparent;
+  }
+  
+  @media (min-width: 768px) {
+    .img-container img {
+      max-width: 250px; /* Adjust the maximum width as needed */
+    }
+  }
+  

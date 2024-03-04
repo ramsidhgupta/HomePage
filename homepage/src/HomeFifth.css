@@ -1,0 +1,98 @@
+.py-10 {
+    padding-top: 2.5rem!important;
+    padding-bottom: 2.5rem!important
+}
+
+.item-inner {
+    padding: 1rem .75rem
+}
+.ratings {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: .8rem
+}
+ 
+@keyframes slideInUp1 {
+    from {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp1 {
+    animation-name: slideInUp1;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInUp2 {
+    from {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp2 {
+    animation-name: slideInUp2;
+    animation-duration: 700ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInUp3 {
+    from {
+      transform: translateY(40%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp3 {
+    animation-name: slideInUp3;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+
+  @keyframes slideInUp4 {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp4 {
+    animation-name: slideInUp4;
+    animation-duration: 1200ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }

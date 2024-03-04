@@ -1,0 +1,138 @@
+
+    
+    .py-10 {
+        padding-top: 2.5rem!important;
+        padding-bottom: 2.5rem!important
+    }
+    
+    /* .item-inner {
+        padding: 1rem .75rem
+    } */
+    /* .ratings {
+        display: inline-block;
+        position: relative;
+        width: 5rem;
+        height: .8rem
+    } */
+     
+    
+.hover-scale {
+        overflow: hidden;      
+        transform: translateY(0)
+}
+.hover-scale img {
+        transition: all .35s ease-in-out
+    }
+    
+.hover-scale:hover img {
+        transform: scale(1.09)
+}
+.overlay {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    transform: translate3d(0,0,0)
+}
+a {
+    text-decoration: none
+}
+.overlay a {
+    position: relative;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer!important
+}
+
+.overlay span.bg {
+    position: relative;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    cursor: pointer!important;
+    opacity: 0;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(30,34,40,.6)
+}
+
+.overlay-1 * {
+    box-sizing: border-box
+}
+.overlay * {
+    color: #fff!important
+}
+
+.overlay-1 figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: .75rem 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    text-align: center
+}
+
+.overlay .figcaption,.overlay figcaption {
+    padding: .5rem;
+    z-index: 5;
+    pointer-events: none
+}
+
+.overlay-1 .from-top {
+    position: absolute;
+    padding: .75rem 1rem;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-80%)
+}
+
+.overlay-1:hover .figcaption,.overlay-1:hover figcaption {
+    opacity: 1
+}
+
+.overlay-1:hover .figcaption *,.overlay-1:hover figcaption * {
+    transform: translateY(-50%)
+}
+
+
+.overlay * {
+    transition: all .4s ease
+}
+.mb-3 {
+    margin-bottom: .75rem!important
+}
+
+a {
+    transition: all .2s ease-in-out
+}
+
+.card-overlay {
+    position: absolute; /* Position the overlay absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0)!important; /* Initially transparent */
+    transition: background-color 0.3s ease!important; /* Add a smooth transition */
+  }
+  
+  .card:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.5)!important; /* Semi-transparent black on hover */
+  }
+
+  h1, h2, h3 {
+    color: #FF5733!important;
+  }

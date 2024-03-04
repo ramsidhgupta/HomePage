@@ -1,0 +1,93 @@
+.icon-svg, .icon-sv-md{
+    width:2.6rem;
+    height:2.6rem;
+}
+.lineal-fill{
+    fill:#8caeec;
+}
+.lineal-stroke{
+    fill:#36496d;
+}
+.display-4, .display-5{
+    line-height: 1.3;
+}
+
+.shape.rellax {
+    position: absolute
+}
+
+.shape.rellax {
+    z-index: 1
+}
+@media (max-width:575.98px){
+.shape{
+    display:none;
+}}
+.h-16{
+    height: 6rem !important;
+}
+.w-16{
+    width: 6rem !important;
+}
+
+@keyframes slideInUp1 {
+    from {
+      transform: translateY(20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp1 {
+    animation-name: slideInUp1;
+    animation-duration: 800ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes slideInUp2 {
+    from {
+      transform: translateY(40%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp2 {
+    animation-name: slideInUp2;
+    animation-duration: 1200ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+  @keyframes slideInUp3{
+    from {
+      transform: translateY(60%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp3 {
+    animation-name: slideInUp3;
+    animation-duration: 2000ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }

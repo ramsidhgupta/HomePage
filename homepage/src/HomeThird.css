@@ -1,0 +1,17 @@
+.card {
+  box-shadow: 0 0 0 .05rem rgba(8,60,130,.06),0 0 1.25rem rgba(30,34,40,.04);
+  border: 0
+}
+.card{
+  word-wrap: break-word!important;
+}
+.p-6{
+  padding:1.5rem!important;
+}
+.card-body{
+  flex:1 1 auto;
+  padding:2rem 2rem;
+}
+.mt-6{
+  margin-top:1.5rem!important;
+}

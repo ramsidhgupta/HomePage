@@ -1,0 +1,200 @@
+.navbar-clone {
+    position: fixed!important;
+    z-index: 1008!important;
+    top: 0;
+    left: 0;
+    /* transform: translateY(-100%); */
+    transition: all .3s ease-in-out,padding-right 0s
+}
+.navbar {
+    width: 100%;
+    z-index: 1020;
+}
+.navbar {
+    
+    padding-top: 0!important;
+    padding-right: 0!important;
+    padding-bottom: 0!important;
+    padding-left: 0!important;
+}
+.content-wrapper{
+    flex-grow:1;
+}
+.content-wrapper, footer{
+    flex-shrink: 0;
+}
+.navbar .container{
+    position:relative;
+}
+@media (max-width:991.98px){
+.navbar-expand-lg .navbar-brand{
+    padding-top:1.2rem;
+    padding-bottom:1.2rem;
+}
+}
+
+.navbar-dark .navbar-brand{
+    color:rgba(255,255,255,.7);
+}
+a{
+    transition:all .2s ease-in-out;
+}
+a{
+    color:#3f78e0!important;
+    text-decoration:none!important;
+}
+.navbar.transparent.fixed .logo-dark{
+    display:inline-block;
+}
+.navbar-brand img{
+    max-width:100%;
+    height:39px;
+
+ 
+}
+.navbar.transparent .logo-dark{
+    display:none;
+}
+img, svg{
+    vertical-align: middle;
+}
+.navbar.transparent.fixed .logo-light{
+    display: none;
+}
+
+.navbar .navbar-collapse{
+    align-items:center;
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .offcanvas-nav{
+        overflow-x: hidden;
+        overflow-y:auto;
+        flex-direction: column;
+    }
+}
+.offcanvas-start{
+    top: 0;
+    left:0;
+    width:15rem;
+    border-right: 0 solid transparent;
+    transform:translateX(-100%);
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .offcanvas-nav .offcanvas-body{
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow-y:unset;
+        flex-grow: 0;
+    }
+}
+
+@media(max-width:991.98px){
+    .navbar-expand-lg .offcanvas-nav .offcanvas-body,.navbar-expand-lg .offcanvas-nav .offcanvas-footer,.navbar-expand-lg .offcanvas-nav .offcanvas-header {
+        width: 100%;
+    }
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .nav-link {
+        padding-top: .3rem;
+        padding-bottom: .3rem
+    }
+
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .nav-link,.navbar-expand-lg .navbar-collapse .nav-link.active,.navbar-expand-lg .navbar-collapse .nav-link:focus,.navbar-expand-lg .navbar-collapse .nav-link:hover,.navbar-expand-lg .navbar-collapse .show>.nav-link {
+        color: #fff!important
+    }
+}
+.navbar-dark .navbar-nav .nav-link{
+    color:#fff;
+}
+.navbar-nav .nav-link{
+    padding-right: 0;
+    padding-left:0;
+    white-space: nowrap;
+}
+.nav-link{
+    letter-spacing: -.01rem;
+}
+.nav-link {
+    transition: color 0.3s, transform 0.3s; /* Transition for color and transform */
+  }
+  
+  .nav-link:hover {
+    color: red; /* Text color on hover */
+    transform: scale(1.2); /* Zoom effect on hover */
+  }
+  
+@media (max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .nav-link,.navbar-expand-lg .navbar-collapse .nav-link.active,.navbar-expand-lg .navbar-collapse .nav-link:focus,.navbar-expand-lg .navbar-collapse .nav-link:hover,.navbar-expand-lg .navbar-collapse .show>.nav-link {
+        color: #fff!important
+    }
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .dropdown-toggle:after {
+        position: absolute;
+        margin-right: 0;
+        right: -.25rem;
+        top: .35rem;
+        font-size: .85rem
+    }
+}
+.navbar .dropdown-toggle:after {
+    font-weight: 700
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .dropdown-menu {
+        padding: 0;
+        margin-top: 0;
+        background: 0 0
+    }
+}
+.dropdown-menu{
+    border:0;
+}
+@media(max-width:991.98px){
+    .navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item {
+        color: #fff;
+        padding-left: 1rem;
+        padding-top: .3rem;
+        padding-bottom: .3rem
+    }
+}
+
+.dropdown-item{
+    font-weight: 700!important;
+    letter-spacing: -.01rem;
+}
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+/* Default font size */
+.navbar-nav .nav-link {
+    font-size: 12px; 
+  }
+  
+  /* Responsive font size adjustments */
+  @media screen and (min-width: 768px) {
+    .navbar-nav .nav-link {
+      font-size: 18px;
+       
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .navbar-nav .nav-link {
+      font-size: 20px; 
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .navbar-nav .nav-link {
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+  /* .custom-nav .nav-link {
+    font-size: 18px; 
+  } */
+  

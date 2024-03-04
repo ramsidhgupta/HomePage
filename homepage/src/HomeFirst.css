@@ -1,0 +1,113 @@
+@keyframes slideInUp4 {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .slideInUp4 {
+    animation-name: slideInUp4;
+    animation-duration: 1200ms;
+    animation-timing-function: ease-out;
+    animation-delay: 3ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+  .image-car {
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .carousel-content {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* .carousel-text {
+    position: absolute;
+    top: 50%; 
+    left: 15%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+  }
+  
+  .carousel-text h1 {
+    font-size:4rem; 
+    margin-bottom: 10px;
+  }
+  
+  .carousel-text p {
+    font-size: 1rem; 
+    margin-bottom: 20px;
+    left:40%;
+  }
+  
+  .carousel-text button {
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: #fff; 
+    border: 2px solid #fff; 
+    border-radius: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .carousel-text button:hover {
+    background-color: white;
+    color: #000; 
+  }
+   */
+  .heading1 {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 1.5s;
+    transform: translateX(-3em);
+    z-index: 9999;
+  }
+  
+
+  .content-wrapper{
+    flex-grow:1!important;
+    flex-shrink:0!important;
+  }
+  header{
+    position: relative;
+  }
+
+  @media (max-width: 767px) {
+    .swiper-hero {
+        height:500px!important
+    }
+
+    .swiper-hero .swiper-slide {
+        height: 500px!important
+    }
+
+    .swiper-hero .swiper-navigation {
+        display: none
+    }
+}
+.swiper-hero {
+  height: 550px!important
+}
+
+.swiper-hero .swiper-slide {
+  height: 550px!important;
+  background-size: cover;
+  background-position: center center
+}
+
+.swiper-slide.bg-overlay .caption-wrapper>*,.swiper-slide.bg-overlay [class*=container]>* {
+  position: relative;
+  z-index: 3
+}
+.fs-56{
+  font-size:calc(1.405rem + 1.86vw)!important;
+}

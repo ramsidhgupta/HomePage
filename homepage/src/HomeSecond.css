@@ -1,0 +1,154 @@
+.wrapper-border {
+    border-bottom: 1px solid rgba(164,174,198,.2)
+}
+@media(min-width:768px){
+.py-md-10 {
+    padding-top: 2.5rem!important;
+    padding-bottom: 2.5rem!important
+}
+}
+.py-14 {
+    padding-top: 4.5rem!important;
+    padding-bottom: 4.5rem!important
+}
+
+.g-10,.gy-10 {
+    --bs-gutter-y: 2.5rem
+}
+.bg-dot.primary {
+    background-image: radial-gradient(#3f78e0 2px,transparent 2.5px)
+}
+.shape.rellax {
+    z-index: 1
+}
+.shape.rellax {
+    position: absolute
+}
+@media (max-width: 575.98px) {
+    .shape {
+        display:none
+    }
+}
+.bg-dot{
+    background-size:0.75rem 0.75rem;
+}
+.bg-dot, .bg-line{
+    opacity:.4;
+}
+.h-20{
+    height:10rem!important;
+}
+.w-16{
+    width:6rem!important;
+}
+
+.overlap-grid {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative
+}
+
+@media (min-width: 768px) {
+    .overlap-grid-2 .item:nth-child(1) {
+        width:70%;
+        margin-top: 0;
+        margin-left: 30%;
+        z-index: 3
+    }
+
+    .overlap-grid-2 .item:nth-child(2) {
+        width: 55%;
+        margin-top: -20%;
+        margin-left: 0;
+        z-index: 4
+    }
+
+    .overlap-grid-2 .item:nth-child(3) {
+        width: 60%;
+        margin-top: -35%;
+        margin-left: 40%;
+        z-index: 2
+    }
+}
+
+@media (max-width: 767px) {
+    .overlap-grid-2 .item {
+        width:100%
+    }
+
+    .overlap-grid-2 .item+.item {
+        margin-top: 1.5rem
+    }
+}
+.item figure, .swiper-slide figure{
+    position:relative;
+}
+
+.rounded img{
+    border-radius:0.4rem;
+}
+figure {
+    margin: 0;
+    padding: 0
+}
+
+figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto!important
+}
+
+h2, h3 {
+    color: #FFBF0F;
+}
+
+.icon-list {
+    padding-left: 0;
+    list-style: none
+}
+
+.icon-list.bullet-bg li {
+    padding-left: 1.5rem
+}
+
+.icon-list li {
+    position: relative;
+    padding-left: 1.25rem
+}
+
+.icon-list.bullet-soft-primary.bullet-bg i {
+    background-color: #dce7f9
+}
+.icon-list.bullet-bg i {
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    top: .2rem;
+    font-size: .8rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    display: table
+}
+.icon-list.bullet-soft-primary i {
+    color: #3f78e0
+}
+[class*=" uil-"],[class^=uil-] {
+    font-family: Unicons!important
+}
+[class*=" icn-"],[class*=" uil-"],[class^=icn-],[class^=uil-] {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-spacing: normal
+}
+.icon-list i {
+    position: absolute;
+    top: -.2rem;
+    left: 0;
+    font-size: 1rem
+}
