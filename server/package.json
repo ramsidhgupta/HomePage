@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "watch": "webpack --watch",
+      "build": "webpack"
   },
   "author": "",
   "license": "ISC",
