@@ -6,14 +6,19 @@ const path = require("path");
 const app = express();
 require('dotenv').config();
 
+const buildPath = path.join(__dirname, 'build')
+
+
 app.use(cors());
 app.use(express.json()); 
+app.use(express.static(buildPath))
 app.use(express.urlencoded({ extended: true })); 
 
 
 const portserver = process.env.PORT || 3001
 const mailG = process.env.EMAIL_USER
 const passG =  process.env.EMAIL_PASS
+
 
 
 const storage = multer.diskStorage({
@@ -183,6 +188,11 @@ app.post(
     });
   }
 );
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'))
+})
+
 
 app.listen(portserver, () => {
   console.log(`Server is running on port ${portserver}`);
