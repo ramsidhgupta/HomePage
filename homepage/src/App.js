@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <NewNav/>
-      {/* <SocialMedia/> */}
+      
     <Routes>
       <Route path="/" element={<Header/>}/>
       <Route path="/CarrierPage" element={<CarrerPage/>}/>

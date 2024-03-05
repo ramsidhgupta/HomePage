@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import logo from './assets/techsoC.png'
 
 import "./NavNew.css";
 
 function NewNav() {
+
+const [sidebarOpen, setSidebarOpen] = useState(false);
+
   useEffect(() => {
     const body = document.body;
     let lastScroll = 0;
@@ -38,6 +41,13 @@ function NewNav() {
     };
   }, []);
 
+  const handleLinkClick = () => {
+    setSidebarOpen(false); 
+  };
+
+
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top">
@@ -52,14 +62,14 @@ function NewNav() {
           <button
             className="navbar-toggler shadow-none border-0"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="sidebar offcanvas offcanvas-start"
+            className={`sidebar offcanvas offcanvas-start ${sidebarOpen ? 'show' : ''}`}
+
+            
             tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
@@ -78,16 +88,15 @@ function NewNav() {
                 className="btn-close btn-close-black shadow-none"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
+                onClick={() => setSidebarOpen(false)}
               ></button>
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 p-lg-0">
                 <li className="nav-item mx-2">
-                <Link to="/"
-                    className="nav-link active font-weight-bold"
-                    aria-current="page"
-                    href="#"
-                  >
+                <Link to="/" className="nav-link active font-weight-bold" aria-current="page" onClick={handleLinkClick}>
+
+                
                     Home
                   </Link>
                 </li>
@@ -103,7 +112,7 @@ function NewNav() {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                    <Link to="SemiCondEngin" className="dropdown-item">
+                    <Link to="SemiCondEngin" className="dropdown-item" aria-current="page" onClick={handleLinkClick}>
                         Semiconducter Engineering
                       </Link>
                     </li>
@@ -122,19 +131,19 @@ function NewNav() {
                   <ul className="dropdown-menu">
                     <li>
                     <Link
-                            to="ConsultServices"className="dropdown-item">
+                            to="ConsultServices"className="dropdown-item" aria-current="page" onClick={handleLinkClick}>
                         Consulting Service
                       </Link>
                     </li>
                     <hr className="dropdown-divider" />
                     <li>
-                    <Link to="ProjectOutSource" className="dropdown-item">
+                    <Link to="ProjectOutSource" className="dropdown-item" aria-current="page" onClick={handleLinkClick}>
                         Project Outsourcing
                       </Link>
                     </li>
                     <hr className="dropdown-divider" />
                     <li>
-                    <Link to="OffshoreDev" className="dropdown-item" href="#">
+                    <Link to="OffshoreDev" className="dropdown-item" href="#" aria-current="page" onClick={handleLinkClick}>
                         Offshore Development
                       </Link>
                     </li>
@@ -142,17 +151,17 @@ function NewNav() {
                   </ul>
                 </li>
                 <li className="nav-item mx-2">
-                  <Link to="AboutUs"className="nav-link" href="#">
+                  <Link to="AboutUs"className="nav-link" href="#" aria-current="page" onClick={handleLinkClick}>
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item mx-2">
-                <Link to="CarrierPage" className="nav-link" href="#">
+                <Link to="CarrierPage" className="nav-link" href="#" aria-current="page" onClick={handleLinkClick}>
                     Careers
                   </Link>
                 </li>
                 <li className="nav-item mx-2">
-                  <Link to="ContactUs" className="nav-link" href="#">
+                  <Link to="ContactUs" className="nav-link" href="#" aria-current="page" onClick={handleLinkClick}>
                     Contact Us
                   </Link>
                 </li>
