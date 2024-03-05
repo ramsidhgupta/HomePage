@@ -41,7 +41,7 @@ const HomeSeventh = () => {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={variants5}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             data-cue="slideInLeft"
           >
             <motion.div
@@ -50,7 +50,7 @@ const HomeSeventh = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={variants4}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               style={{
                 top: "-2rem",
                 left: "0.4rem",
@@ -82,7 +82,7 @@ const HomeSeventh = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={variants1}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4 }}
               data-cue="slideInRight"
             >
               <div>
@@ -109,7 +109,7 @@ const HomeSeventh = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={variants2}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               data-cue="slideInRight"
             >
               <div>
@@ -129,7 +129,7 @@ const HomeSeventh = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={variants3}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               data-cue="slideInRight"
             >
               <div>

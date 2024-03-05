@@ -7,9 +7,11 @@ import { useInView } from "react-intersection-observer";
 import { Icon } from "@iconify/react";
 import HeadSection from "./HeadSection";
 import aboutUs from './assets/about-us.jpg'
-
+import './AboutUs.css';
 const AboutUs = () => {
   const [ref, inView] = useInView();
+  const [ref1, inView1] = useInView();
+
 
   const containerVariants = {
     hidden: { opacity: 1 },
@@ -196,17 +198,16 @@ const AboutUs = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div
-            className="col-md-6 col-lg-4"
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variants5}
-            transition={{ duration: 1, delay: 0.1 }}
-          >
+          <div
+              ref={ref1}
+              className={`col-md-6 col-lg-4 ${
+                inView1 ? "animate__animated animate__fadeInUp animate__delay-ms5" : ""
+              }`}
+            >
+          
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 30 409.6 362.5"
+              viewBox="-950 0 2309.6 362.5"
               className="svg-inject icon-svg icon-svg-md text-blue mb-3"
             >
               <path
@@ -235,18 +236,16 @@ const AboutUs = () => {
               Focused on addressing client challenges and giving economical
               business and innovation benefits
             </p>
-          </motion.div>
-          <motion.div
-            className="col-md-6 col-lg-4"
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variants5}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
+          </div>
+          <div
+              ref={ref1}
+              className={`col-md-6 col-lg-4 ${
+                inView1 ? "animate__animated animate__fadeInUp animate__delay-0.7s" : ""
+              }`}
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="20 90 709.6 362.5"
+              viewBox="-1200 0 3509.6 582.5"
               className="svg-inject icon-svg icon-svg-md text-green mb-3"
             >
               <circle
@@ -281,19 +280,17 @@ const AboutUs = () => {
               Creating adaptable, future-confirmation business arrangements that
               assist clients with pushing forward.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="col-md-6 col-lg-4"
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variants5}
-            transition={{ duration: 1, delay: 0.1 }}
-          >
+          <div
+              ref={ref1}
+              className={`col-md-6 col-lg-4 ${
+                inView1 ? "animate__animated animate__fadeInUp animate__delay-1s" : ""
+              }`}
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="20 5 609.6 382.5"
+              viewBox="-1100 0 2909.6 482.5"
               className="svg-inject icon-svg icon-svg-md text-yellow mb-3"
             >
               <path
@@ -317,7 +314,7 @@ const AboutUs = () => {
             <p className="mb-2">
               Building a consistent channel for data trade among clients and us.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
       <hr className="double my-8" />

@@ -1,0 +1,4 @@
+/* Custom delay in milliseconds */
+.animate__delay-ms5 {
+    animation-delay: 0.5s !important; /* Adjust the delay value as needed */
+}
