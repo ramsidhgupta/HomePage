@@ -12,18 +12,13 @@ const AboutUs = () => {
   const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();
 
-
-  const containerVariants = {
-    hidden: { opacity: 1 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.5 } },
-  };
   const variants1 = {
     hidden: { opacity: 1, x: 0 },
     visible: { opacity: 1, x: -150 },
   };
   const variants2 = {
     hidden: { opacity: 1, x: 0 },
-    visible: { opacity: 1, x: 200 },
+    visible: { opacity: 1, x: 50 },
   };
   const variants3 = {
     hidden: { opacity: 1, y: 0 },
@@ -31,10 +26,10 @@ const AboutUs = () => {
   };
   const variants4 = {
     hidden: { opacity: 1, y: 0 },
-    visible: { opacity: 1, y: -100 },
+    visible: { opacity: 1, y: -25 },
   };
   const variants5 = {
-    hidden: { opacity: 1, y: -50 },
+    hidden: { opacity: 1, y: 150 },
     visible: { opacity: 1, y: 0 },
   };
   
@@ -192,18 +187,15 @@ const AboutUs = () => {
         </div>
         <hr className="double my-8" />
         <div
-          className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center"
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div
-              ref={ref1}
-              className={`col-md-6 col-lg-4 ${
-                inView1 ? "animate__animated animate__fadeInUp animate__delay-ms5" : ""
-              }`}
-            >
+          className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center">
+             <motion.div
+                className="col-md-6 col-lg-4"
+                ref={ref1}
+                initial="hidden"
+                animate={inView1 ? "visible" : "hidden"}
+                variants={variants5}
+                transition={{ duration: 0.5 }}
+              >
           
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -236,13 +228,15 @@ const AboutUs = () => {
               Focused on addressing client challenges and giving economical
               business and innovation benefits
             </p>
-          </div>
-          <div
-              ref={ref1}
-              className={`col-md-6 col-lg-4 ${
-                inView1 ? "animate__animated animate__fadeInUp animate__delay-0.7s" : ""
-              }`}
-            >
+          </motion.div>
+          <motion.div
+                className="col-md-6 col-lg-4"
+                ref={ref1}
+                initial="hidden"
+                animate={inView1 ? "visible" : "hidden"}
+                variants={variants5}
+                transition={{ duration: 0.9}}
+              >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-1200 0 3509.6 582.5"
@@ -280,14 +274,16 @@ const AboutUs = () => {
               Creating adaptable, future-confirmation business arrangements that
               assist clients with pushing forward.
             </p>
-          </div>
+          </motion.div>
 
-          <div
-              ref={ref1}
-              className={`col-md-6 col-lg-4 ${
-                inView1 ? "animate__animated animate__fadeInUp animate__delay-1s" : ""
-              }`}
-            >
+          <motion.div
+                className="col-md-6 col-lg-4"
+                ref={ref1}
+                initial="hidden"
+                animate={inView1 ? "visible" : "hidden"}
+                variants={variants5}
+                transition={{ duration: 1.2 }}
+              >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-1100 0 2909.6 482.5"
@@ -314,7 +310,7 @@ const AboutUs = () => {
             <p className="mb-2">
               Building a consistent channel for data trade among clients and us.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <hr className="double my-8" />

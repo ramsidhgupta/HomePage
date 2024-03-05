@@ -23,7 +23,7 @@ import LifeComp from './LifeComp'
 import EmpQuotes1 from './EmpQuotes1';
 import PhotoShow from './PhotoShow';
 import AwardShow from './AwardShow';
-
+import ValueVision from './ValueVision';
 function App() {
   return (
     <>
@@ -44,15 +44,7 @@ function App() {
       <Route path="/employee-quotes" element={<EmpQuotes1/>}/>
       <Route path="/photos-events" element={<PhotoShow/>}/>
       <Route path="/recognition-awards" element={<AwardShow/>}/> 
-        <Route
-          path="/values-mission"
-          element={
-            <div>
-              <h1>values and mission</h1>
-              <p>This is a paragraph with some content.</p>
-            </div>
-          }
-        />
+      <Route path="/values-mission" element={<ValueVision/>}/>
     </Routes>
       <ProgressBar/>
       <Footer/>

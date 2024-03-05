@@ -45,6 +45,8 @@ const HomeThird = () => {
               <img
                 src={list}
                 className="svg-inject icon-svg icon-svg-md mb-4"
+                width="50"
+                height="50"
                 alt=""
               />
               <h2 className="display-4 mb-2 px-lg-14">Why TechsoC</h2>

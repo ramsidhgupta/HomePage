@@ -74,6 +74,8 @@ const HomeSecond = () => {
             <img
               src={megaphone}
               className="svg-inject icon-svg icon-svg-md mb-4"
+              width="50" 
+              height="50" 
               alt=""
             />
             <h2 className="display-4 mb-3">Who Are We?</h2>

@@ -16,11 +16,6 @@ import case4 from './assets/case4.jpg';
 
 
 const HomeSixth = () => {
-  
-  const variants2 = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-  };
 
 
 
@@ -42,20 +37,24 @@ const HomeSixth = () => {
             spaceBetween={10}
             autoplay={{ delay: 2000, disableOnInteraction: false }}
             breakpoints={{
+              150: {
+                slidesPerView: 1,
+                spaceBetween: 50,
+              },
               480: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 50,
               },
               640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
+                slidesPerView: 2,
+                spaceBetween: 50,
               },
               768: {
                 slidesPerView: 2,
                 spaceBetween: 30,
               },
               992: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 40,
               },
               1200: {
@@ -71,12 +70,8 @@ const HomeSixth = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <motion.div
+              <div
                
-                initial={{ opacity: 0, y: 100 }}
-                animate= "visible"
-                variants={variants2}
-                transition={{ duration: 0.5, delay: 0.1 }}
                 className="swiper-slide swiper-slide-active slide "
               >
                 <article>
@@ -104,15 +99,12 @@ const HomeSixth = () => {
                     </h2>
                   </div>
                 </article>
-              </motion.div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <motion.div
+              <div
                 
-                initial={{ opacity: 0, y: 100 }}
-                animate="visible"
-                variants={variants2}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                
                 className="swiper-slide swiper-slide-active slide"
               >
                 <article>
@@ -140,15 +132,12 @@ const HomeSixth = () => {
                     </h2>
                   </div>
                 </article>
-              </motion.div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <motion.div
+              <div
                 
-                initial={{ opacity: 0, y: 100 }}
-                animate="visible"
-                variants={variants2}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                
                 className="swiper-slide swiper-slide-active slide"
               >
                 <article>
@@ -176,15 +165,12 @@ const HomeSixth = () => {
                     </h2>
                   </div>
                 </article>
-              </motion.div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <motion.div
+              <div
                
-                initial={{ opacity: 0, y: 100 }}
-                animate="visible"
-                variants={variants2}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                
                 className="swiper-slide swiper-slide-active slide"
               >
                 <article>
@@ -212,7 +198,7 @@ const HomeSixth = () => {
                     </h2>
                   </div>
                 </article>
-              </motion.div>
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>

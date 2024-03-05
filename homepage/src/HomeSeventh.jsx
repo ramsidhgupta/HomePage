@@ -9,7 +9,7 @@ import { Icon } from "@iconify/react";
 
 const HomeSeventh = () => {
   const [ref, inView] = useInView();
-
+  const [ref1, inView1] = useInView();
   const variants1 = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 50 },
@@ -24,7 +24,7 @@ const HomeSeventh = () => {
   };
   const variants4 = {
     hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: -20 },
+    visible: { opacity: 1, x: 0 },
   };
   const variants5 = {
     hidden: { opacity: 0, y: -100 },
@@ -46,17 +46,11 @@ const HomeSeventh = () => {
           >
             <motion.div
               class="shape bg-dot primary rellax w-17 h-21 position-absolute"
-              ref={ref}
+              ref={ref1}
               initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              animate={inView1 ? "visible" : "hidden"}
               variants={variants4}
-              transition={{ duration: 0.6 }}
-              style={{
-                top: "-2rem",
-                left: "0.4rem",
-                transform: "translate3d(0px, -50px,0px",
-               
-              }}
+              transition={{ duration: 0.2 }}
             ></motion.div>
             <figure class="rounded">
               <img
@@ -71,6 +65,8 @@ const HomeSeventh = () => {
             <img
               src={telemarketer}
               class="svg-inject icon-svg icon-svg-md mb-4 mt-5"
+              width="50" 
+              height="50" 
               alt=""
             />
             <h2 class="display-4 mb-8">
