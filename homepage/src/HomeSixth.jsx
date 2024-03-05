@@ -39,8 +39,8 @@ const HomeSixth = () => {
           </div>
           <Swiper
             slidesPerView={4}
-            spaceBetween={5}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            spaceBetween={10}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             breakpoints={{
               480: {
                 slidesPerView: 1,

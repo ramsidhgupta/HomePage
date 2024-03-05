@@ -16,7 +16,7 @@ const HomeSecond = () => {
   };
   const variants2 = {
     hidden: { opacity: 0, x: 300 },
-    visible: { opacity: 1, x: 40 },
+    visible: { opacity: 1, x: 0 },
   };
   const variants3 = {
     hidden: { opacity: 0, x: -400 },

@@ -9,8 +9,8 @@ const HomeThird = () => {
   const [ref, inView] = useInView();
 
   const variants1 = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 50 },
+    hidden: { opacity: 0, x: -150 },
+    visible: { opacity: 1, x: 0 },
   };
   const variants2 = {
     hidden: { opacity: 0, x: 200 },
@@ -18,22 +18,22 @@ const HomeThird = () => {
   };
   const variants3 = {
     hidden: { opacity: 0, x: 150 },
-    visible: { opacity: 1, x: 60 },
+    visible: { opacity: 1, x: 0 },
   };
   const variants4 = {
     hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: -10 },
+    visible: { opacity: 1, x: 0 },
   };
   const variants5 = {
-    hidden: { opacity: 0, y: -100 },
-    visible: { opacity: 1, y: -10 },
+    hidden: { opacity: 0, y: -150 },
+    visible: { opacity: 1, y: 0 },
   };
   return (
     <>
       <section className="wrapper-border bg-light angled lower-end">
         <div className="container py-14 py-md-10">
           <motion.div
-            className="row mb-5"
+            className="row mb-1"
             ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -47,7 +47,7 @@ const HomeThird = () => {
                 className="svg-inject icon-svg icon-svg-md mb-4"
                 alt=""
               />
-              <h2 className="display-4 mb-4 px-lg-14">Why TechsoC</h2>
+              <h2 className="display-4 mb-2 px-lg-14">Why TechsoC</h2>
             </div>
           </motion.div>
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
@@ -102,7 +102,7 @@ const HomeThird = () => {
                 </div>
               </motion.div>
               <motion.div
-                className="card mx-lg-6 mt-6"
+                className="card mx-lg-6 mt-6 mb-6"
                 ref={ref}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}

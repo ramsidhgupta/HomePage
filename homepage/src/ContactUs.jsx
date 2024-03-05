@@ -33,7 +33,7 @@ const ContactUs = () => {
     
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/submitFormEnq",
+        "https://homepage-12.onrender.com/api/submitFormEnq",
         {
           firstname: formData.firstname,
           lastname: formData.lastname,

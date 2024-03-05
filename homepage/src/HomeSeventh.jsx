@@ -68,7 +68,7 @@ const HomeSeventh = () => {
           <div class="col-lg-6">
             <img
               src={telemarketer}
-              class="svg-inject icon-svg icon-svg-md mb-4"
+              class="svg-inject icon-svg icon-svg-md mb-4 mt-5"
               alt=""
             />
             <h2 class="display-4 mb-8">
