@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import HeadSection from "./HeadSection";
 import aboutUs from './assets/about-us.jpg'
 import './AboutUs.css';
+import PhotoShow from "./PhotoShow";
 const AboutUs = () => {
   const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();
@@ -185,7 +186,8 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <hr className="double my-8" />
+        <hr className="double my-6" />
+        <PhotoShow/>
         <div
           className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center">
              <motion.div

@@ -7,6 +7,8 @@ import Popup from "./Popup";
 import { useInView } from "react-intersection-observer";
 import HeadSection from "./HeadSection";
 import carrier from './assets/careers.jpg'
+import AwardShow from './AwardShow';
+import EmpQuotes1 from './EmpQuotes1';
 
 const CarrerPage = () => {
   const [formData, setFormData] = useState({
@@ -193,7 +195,7 @@ const CarrerPage = () => {
                   </motion.div>
                 </div>
                 <div class="col-md-6">
-                  <div class="row gx-md-5 gy-5 mt-10">
+                  <div class="row gx-md-5 gy-5">
                     <div class="col-md-12 order-md-2">
                       <motion.div
                         ref={ref4}
@@ -456,6 +458,9 @@ const CarrerPage = () => {
           </div>
         </div>
       </section>
+      <hr className="double my-6" />
+      <AwardShow/>
+      <EmpQuotes1/>
       <section>
         <a id="form"></a>
         <div class="container  pb-7" ref={sectionRef}>

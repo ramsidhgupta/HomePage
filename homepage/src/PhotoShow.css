@@ -6,8 +6,8 @@
     position: relative;
     margin-top: 8%;
     margin-bottom: 8%;
-    left:3%; 
-    width:92vw;
+    /* left:1%;  */
+    width:85vw;
     height:65vh;
     box-shadow: 0 30px 50px #dbdbdb;
 }
