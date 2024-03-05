@@ -15,7 +15,7 @@ app.use(express.static(buildPath))
 app.use(express.urlencoded({ extended: true })); 
 
 
-const portserver = process.env.PORT || 3002
+const portserver = process.env.PORT || 3001
 const mailG = process.env.EMAIL_USER
 const passG =  process.env.EMAIL_PASS
 
