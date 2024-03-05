@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { easeInOut, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Icon } from "@iconify/react";
+import CharaAnim from "./CharaAnim";
 
 const ValueVision = () => {
   const [ref, inView] = useInView();
@@ -25,6 +26,11 @@ const ValueVision = () => {
     hidden: { opacity: 1, y: -350 },
     visible: { opacity: 1, y: 0 },
   };
+ const vision =  "To be the most respected and confided in organization universally that gives top tier business arrangements utilizing the most recent advancements."
+ const mission = "To offer worldwide types of assistance across businesses ina fair and entrusted way and construct a relationship with all partners while developing with development."
+const PHILOSOPHY = "The business reasoning of TechsoC is to lay accentuation on Human Values and Personal Relations."
+
+
   return (
     <div className="container pt-14 pb-16 pt-md-16 pb-md-10">
       <div className="row gx-lg-8 gx-xl-12 gy-10  align-items-center">
@@ -50,9 +56,10 @@ const ValueVision = () => {
                     MISSION
                   </Typography>
                   <Typography variant="body2">
-                    To offer worldwide types of assistance across businesses in
+                  <CharaAnim text={mission} />
+                    {/* To offer worldwide types of assistance across businesses in
                     a fair and entrusted way and construct a relationship with
-                    all partners while developing with development.
+                    all partners while developing with development. */}
                   </Typography>
                 </CardContent>
               </Card>
@@ -78,9 +85,10 @@ const ValueVision = () => {
                     VISION
                   </Typography>
                   <Typography variant="body2">
-                    To be the most respected and confided in organization
+                  <CharaAnim text={vision} />
+                    {/* To be the most respected and confided in organization
                     universally that gives top tier business arrangements
-                    utilizing the most recent advancements.
+                    utilizing the most recent advancements. */}
                   </Typography>
                 </CardContent>
               </Card>
@@ -146,8 +154,7 @@ const ValueVision = () => {
                     PHILOSOPHY
                   </Typography>
                   <Typography variant="body2">
-                    The business reasoning of TechsoC is to lay accentuation on
-                    Human Values and Personal Relations.
+                  <CharaAnim text={PHILOSOPHY} />
                   </Typography>
                 </CardContent>
               </Card>
