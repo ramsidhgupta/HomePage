@@ -19,77 +19,81 @@ const PhotoShow = () => {
   };
 
   return (
-    <div className="app-container mt-3 pt-5">
-      <div className="containerPhoto">
-        <div className="slidePhoto" ref={slideRef}>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event1})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 1</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
+    <div class="container mt-3 pt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div className="containerPhoto">
+            <div className="slidePhoto" ref={slideRef}>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event1})`, objectFit:'cover', display:'flex', justifyContent:'space-between' }}
+              >
+                <div className="contentPhoto" style={{objectFit:'cover', display:'flex', justifyContent:'space-between'}}>
+                  <div className="name">Event Name 1</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event2})` }}
+              >
+                <div className="contentPhoto">
+                  <div className="name">Event Name 2</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event3})` }}
+              >
+                <div className="contentPhoto">
+                  <div className="name">Event Name 3</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event4})` }}
+              >
+                <div className="contentPhoto">
+                  <div className="name">Event Name 4</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event5})` }}
+              >
+                <div className="contentPhoto">
+                  <div className="name">Event Name 5</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+              <div
+                className="itemPhoto"
+                style={{ backgroundImage: `url(${event6})` }}
+              >
+                <div className="contentPhoto">
+                  <div className="name">Event Name 6</div>
+                  <div className="desc">About Event Details</div>
+                  <button>See More</button>
+                </div>
+              </div>
+            </div>
+            <div className="buttonPhoto">
+              <button className="prev" onClick={prevSlide}>
+                <i className="fa-solid fa-arrow-left"></i>
+              </button>
+              <button className="next" onClick={nextSlide}>
+                <i className="fa-solid fa-arrow-right"></i>
+              </button>
             </div>
           </div>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event2})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 2</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
-            </div>
-          </div>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event3})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 3</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
-            </div>
-          </div>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event4})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 4</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
-            </div>
-          </div>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event5})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 5</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
-            </div>
-          </div>
-          <div
-            className="itemPhoto"
-            style={{ backgroundImage: `url(${event6})` }}
-          >
-            <div className="contentPhoto">
-              <div className="name">Event Name 6</div>
-              <div className="desc">About Event Details</div>
-              <button>See More</button>
-            </div>
-          </div>
-        </div>
-        <div className="buttonPhoto">
-          <button className="prev" onClick={prevSlide}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-          <button className="next" onClick={nextSlide}>
-            <i className="fa-solid fa-arrow-right"></i>
-          </button>
         </div>
       </div>
     </div>

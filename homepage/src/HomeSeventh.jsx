@@ -3,7 +3,9 @@ import "./HomeSeventh.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import contact from './assets/contact.jpg';
-import telemarketer from './assets/telemarketer.svg'
+import telemarketer from './assets/telemarketer.svg';
+import { Icon } from "@iconify/react";
+
 
 const HomeSeventh = () => {
   const [ref, inView] = useInView();
@@ -86,7 +88,7 @@ const HomeSeventh = () => {
               <div>
                 <div class="icon text-black-50 fs-28 me-6 mt-n1">
                   {" "}
-                  <i class="uil uil-location-pin-alt"></i>{" "}
+                  <Icon icon="openmoji:location-indicator-red" />
                 </div>
               </div>
               <div>
@@ -113,7 +115,7 @@ const HomeSeventh = () => {
               <div>
                 <div class="icon text--black-50 fs-28 me-6 mt-n1">
                   {" "}
-                  <i class="uil uil-phone-volume"></i>{" "}
+                  <Icon icon="flat-color-icons:cell-phone" />
                 </div>
               </div>
               <div>
@@ -132,8 +134,7 @@ const HomeSeventh = () => {
             >
               <div>
                 <div class="icon text--black-50 fs-28 me-6 mt-n1">
-                  {" "}
-                  <i class="uil uil-envelope"></i>{" "}
+                <Icon icon="emojione-v1:envelope-with-arrow" />
                 </div>
               </div>
               <div>

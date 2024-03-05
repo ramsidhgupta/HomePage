@@ -22,7 +22,7 @@ import NewNav from './NavNew';
 import LifeComp from './LifeComp'
 import EmpQuotes1 from './EmpQuotes1';
 import PhotoShow from './PhotoShow';
-import AwardShow1 from './AwardShow1';
+import AwardShow from './AwardShow';
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
       <Route path="/LifeAtTechsoc" element={<LifeComp/>}/>
       <Route path="/employee-quotes" element={<EmpQuotes1/>}/>
       <Route path="/photos-events" element={<PhotoShow/>}/>
-      <Route path="/recognition-awards" element={<AwardShow1/>}/> 
+      <Route path="/recognition-awards" element={<AwardShow/>}/> 
         <Route
           path="/values-mission"
           element={
