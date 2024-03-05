@@ -21,9 +21,9 @@ const ComponentCall = ({
 }) => {
   
   return (
-    <div class="container pt-12 pt-md-12 pb-6 pb-md-0 pt-xs-12">
+    <div class="container pt-12 pt-md-16 pb-6 pb-md-0 pt-xs-12">
       <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
-        <div className="col-lg-6 item">
+        <div className="col-lg-6 col-md-6 item">
           <div className={`box ${animationClass}`}>
             <p className="description">{description}</p>
           </div>
@@ -51,7 +51,7 @@ const ComponentCall = ({
             </div>
           </div>
         </div>
-        <div className="col-lg-6 item ">
+        <div className="col-lg-6 col-md-6 item ">
           <div className="skill-box">
             <span className="title fw-bold">Skill Development</span>
 

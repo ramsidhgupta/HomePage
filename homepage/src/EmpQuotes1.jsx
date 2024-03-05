@@ -48,15 +48,7 @@ const EmpQuotes1 = () => {
 
   return (
     <>
-      <div className="app-container mt-5 pt-3">
-        <div className="blur-background"></div>
-        <div className="intro">
-          <h2 className="text-center fw-bold">Testimonials</h2>
-          <p className="text-center fw-bold">
-            Our employees love us! Read what they have to say below. Aliquam sed
-            justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.
-          </p>
-        </div>
+      
         <Carousel
           responsive={responsive}
           swipeable={false}
@@ -126,7 +118,7 @@ const EmpQuotes1 = () => {
             animationClass1={animationClass1}
           />
         </Carousel>
-      </div>
+      
     </>
   );
 };

@@ -241,7 +241,7 @@ const AboutUs = () => {
               >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="-1200 0 3509.6 582.5"
+              viewBox="-1400 0 3509.6 582.5"
               className="svg-inject icon-svg icon-svg-md text-green mb-3"
             >
               <circle

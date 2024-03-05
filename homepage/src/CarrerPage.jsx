@@ -460,7 +460,10 @@ const CarrerPage = () => {
       </section>
       <hr className="double my-6" />
       <AwardShow/>
+      <hr className="double my-6" />
+      
       <EmpQuotes1/>
+<hr className="double my-6" />
       <section>
         <a id="form"></a>
         <div class="container  pb-7" ref={sectionRef}>

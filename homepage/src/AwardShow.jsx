@@ -19,18 +19,18 @@ const AwardShow = () => {
   };
 
   return (
-    <div className="app-container mt-3 pt-5">
+    <div className="container mt-3 pt-5">
       <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-md-12">
           <div className="containerPhoto2">
-            <div className="slidePhoto2 col-md-12 col-sm-12" ref={slideRef}>
+            <div className="slidePhoto2" ref={slideRef}>
               <div
-                className="itemPhoto2 col-md-12 col-sm-12"
+                className="itemPhoto2"
                 style={{
-                  backgroundImage: `url(${award1})`,
+                  backgroundImage: `url(${award1})`, objectFit:'cover', display:'flex', justifyContent:'space-between'
                 }}
               >
-                <div className="contentPhoto2">
+                <div className="contentPhoto2" style={{objectFit:'cover', display:'flex', justifyContent:'space-between'}}>
                   <div className="name">Event Name 1</div>
                   <div className="desc">About Event Details</div>
                   <button>See More</button>
