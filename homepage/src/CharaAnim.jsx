@@ -32,7 +32,6 @@ const charVariants = {
 
 const CharaAnim = ({text}) => {
   const [key, setKey] = useState(Math.random());
-//    const text = "To be the most respected and confided in organization universally that gives top tier business arrangements utilizing the most recent advancements."
   return(
     <AnimatePresence>
         <div>
@@ -45,6 +44,7 @@ const CharaAnim = ({text}) => {
                  </motion.span>
             </div>
     </AnimatePresence>
+
   );
 };
 

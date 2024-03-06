@@ -36,13 +36,14 @@
     }
   }
   
-.box {
+.box1 {
     margin-left:0rem;
     width:35vw;
-    padding:10px;
-    background-color:#fff;
-    position:relative;
-    margin-bottom:3px;
+    height: auto;
+    padding:6px;
+    background-color:skyblue;
+    /* position:relative; */
+    margin-bottom:8px;
     margin-top: 3px;
     border-radius: 20px;
     opacity:0;
@@ -64,22 +65,23 @@
   .animate-box {
     animation: animate 1s ease-in-out 1 forwards;
   }
-  I
+  
 
 
 
 
-.box:after {
-    content:'';
-    position:absolute;
-    left:75px;
-    bottom:-24px;
-    width: 2px;
-    height: 2px;
-    border:20px solid transparent;
-    border-width:12px 16px;
-    border-top-color:#fff;
 
+
+.box1:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 33%;
+  width: 12px;
+  height: 10px;
+  border-left: 6px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 15px solid skyblue;
   }
   
  .author {

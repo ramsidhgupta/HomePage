@@ -24,16 +24,18 @@ const ComponentCall = ({
     <div class="container pt-12 pt-md-16 pb-6 pb-md-0 pt-xs-12">
       <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
         <div className="col-lg-6 col-md-6 item">
-          <div className={`box ${animationClass}`}>
-            <p className="description">{description}</p>
+          <div className={`box1 ${animationClass}`}>
+            <span>{description}</span>
           </div>
           <div className="card-footer">
             <div class="author d-flex flex-row">
               <img
-                className={`img-fluid ${animationClass}`}
+                className={`img ${animationClass}`}
                 src={image}
                 alt="Image First"
                 style={{
+                
+                  objectFit:"cover",
                   maxWidth: "200px",
                   borderRadius: "20px",
                   border: "5px solid transparent",

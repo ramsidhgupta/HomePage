@@ -6,23 +6,56 @@ import axios from "axios";
 import Popup from "./Popup";
 import { useInView } from "react-intersection-observer";
 import HeadSection from "./HeadSection";
-import carrier from './assets/careers.jpg'
-import AwardShow from './AwardShow';
-import EmpQuotes1 from './EmpQuotes1';
+import carrier from "./assets/careers.jpg";
+import AwardShow from "./AwardShow";
+import EmpQuotes1 from "./EmpQuotes1";
+
+import award1 from "./assets/award1.jpeg";
+import award2 from "./assets/award2.jpeg";
+import award3 from "./assets/award3.jpeg";
+import award4 from "./assets/award4.jpeg";
+import award5 from "./assets/award5.jpeg";
+import award6 from "./assets/award6.jpeg";
+import ImageSlider from "./ImageSlider";
 
 const CarrerPage = () => {
+  const images = [award1, award2, award3, award4, award5, award6];
+  const titles = [
+    "Best Employee Award",
+    "Best Employee Award",
+    "Best Employee Award",
+    "Best Employee Award",
+    "Best Employee Award",
+    "Best Employee Award",
+  ];
+  const descriptions = [
+    "For the Month of Aug'23",
+    "For the Month of Sep'23",
+    "For the Month of Oct'23",
+    "For the Month of Nov'23",
+    "For the Month of Dec'23",
+    "For the Month of Jan'24",
+  ];
+  const links = [
+    "/CarrierPage",
+    "/CarrierPage",
+    "/CarrierPage",
+    "/CarrierPage",
+    "/CarrierPage",
+    "/CarrierPage",
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    qualification:"",
-    experience:"",
-    role:"",
+    qualification: "",
+    experience: "",
+    role: "",
     file: null,
   });
-  
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,7 +93,6 @@ const CarrerPage = () => {
     setFormData({ ...formData, file });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -82,9 +114,9 @@ const CarrerPage = () => {
         name: "",
         email: "",
         message: "",
-        qualification:"",
-        experience:"",
-        role:"",
+        qualification: "",
+        experience: "",
+        role: "",
         file: null,
       });
       document.getElementById("file").value = "";
@@ -92,7 +124,6 @@ const CarrerPage = () => {
       console.error("Error submitting form:", error);
     }
   };
-
 
   const closePopup = () => {
     setIsPopupVisible(false);
@@ -103,7 +134,7 @@ const CarrerPage = () => {
   const [ref4, inView4] = useInView({});
 
   const sectionRef = useRef(null);
-  
+
   const scrollToSection = () => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -116,13 +147,11 @@ const CarrerPage = () => {
     hidden: { opacity: 0, x: -300 },
     visible: { opacity: 1, x: 0 },
   };
-  
-  
 
   return (
     <>
       <section className="wrapper bg-soft-primary">
-      <HeadSection
+        <HeadSection
           header1="Careers"
           header2="We bring solutions to make life easier."
           imageUrl={carrier}
@@ -208,7 +237,7 @@ const CarrerPage = () => {
                         <div class="card-body counter-wrapper">
                           <h5>Experienced</h5>
                           <p class="mb-5">(Professional)</p>
-                          
+
                           <a
                             class="btn btn-warning rounded-pill move-up-on-hover mb-2 me-1"
                             role="button"
@@ -458,12 +487,26 @@ const CarrerPage = () => {
           </div>
         </div>
       </section>
+      {/* <section class="wrapper bg-light"> */}
+        <div class="container pt-17 pt-md-17 pb-10 pb-md-0 pt-xs-17">
+          <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
+            <div class="col">
+              <ImageSlider
+                images={images}
+                titles={titles}
+                descriptions={descriptions}
+                links={links}
+              />
+            </div>
+          </div>
+          <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
+            <div class="col">
+              <EmpQuotes1 />
+            </div>
+          </div>
+        </div>
+      {/* </section> */}
       <hr className="double my-6" />
-      <AwardShow/>
-      <hr className="double my-6" />
-      
-      <EmpQuotes1/>
-<hr className="double my-6" />
       <section>
         <a id="form"></a>
         <div class="container  pb-7" ref={sectionRef}>
@@ -541,7 +584,9 @@ const CarrerPage = () => {
                             onChange={handleChange}
                             data-error="Valid email is required."
                           />
-                          <label htmlFor="email" className="form-label">Email *</label>
+                          <label htmlFor="email" className="form-label">
+                            Email *
+                          </label>
                           <div class="valid-feedback"> Looks good! </div>
                           <div class="invalid-feedback">
                             {" "}
@@ -561,7 +606,9 @@ const CarrerPage = () => {
                             style={{ height: "150px" }}
                             required="required"
                           ></textarea>
-                          <label htmlFor="message" className="form-label">Message *</label>
+                          <label htmlFor="message" className="form-label">
+                            Message *
+                          </label>
                           <div class="valid-feedback"> Looks good! </div>
                           <div class="invalid-feedback">
                             {" "}

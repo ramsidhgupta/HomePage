@@ -15,18 +15,18 @@ import ThreedCard from "./ThreedCard";
 
 const ImageSlider = ({ images, titles, descriptions, links }) => {
   return (
-    <div className="container">
+    <div className="containerImage">
       <Swiper
         effect={"coverflow"}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        spaceBetween={5}
+        spaceBetween={2}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={3}
+        slidesPerView={2}
         coverflowEffect={{
-          rotate: 0,
-          stretch: 3,
+          rotate: 1,
+          stretch: 1,
           depth: 300,
           modifier: 3.5,
         }}

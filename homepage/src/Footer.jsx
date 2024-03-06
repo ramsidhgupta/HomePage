@@ -65,16 +65,10 @@ const Footer = () => {
                     <i class="fas fa-map-marker-alt pe-2 text-center"></i>
                     Bangalore, India
                   </li>
-                  {/* <li>
-                    <i class="fas fa-phone pe-2"></i>+91 80 67577879
-                  </li>
-                  <li>
-                    <i class="fas fa-envelope pe-2 mb-0"></i>
-                    contact@techsocind.com
-                  </li> */}
+                
                   <li>
                     <Link to="/" class="text-dark">
-                      <i class="fas fa-envelope pe-2 mb-0"></i>© 2024 Copyright
+                      © 2024 Copyright
                       : TechsoCind.com
                     </Link>
                   </li>

@@ -6,16 +6,17 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Icon } from "@iconify/react";
 import HeadSection from "./HeadSection";
-import aboutUs from './assets/about-us.jpg'
-import './AboutUs.css';
+import aboutUs from "./assets/about-us.jpg";
+import "./AboutUs.css";
 import PhotoShow from "./PhotoShow";
+import CharaAnim from "./CharaAnim";
 const AboutUs = () => {
   const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();
 
   const variants1 = {
     hidden: { opacity: 1, x: 0 },
-    visible: { opacity: 1, x: -150 },
+    visible: { opacity: 1, x: -65 },
   };
   const variants2 = {
     hidden: { opacity: 1, x: 0 },
@@ -33,11 +34,22 @@ const AboutUs = () => {
     hidden: { opacity: 1, y: 150 },
     visible: { opacity: 1, y: 0 },
   };
-  
+  const vision =
+    "To be the most respected and confided in organization universally that gives top tier business arrangements utilizing the most recent advancements.";
+  const mission =
+    "To offer worldwide types of assistance across businesses ina fair and entrusted way and construct a relationship with all partners while developing with development.";
+  const PHILOSOPHY =
+    "The business reasoning of TechsoC is to lay accentuation on Human Values and Personal Relations.";
+  const int = "INTEGRITY";
+  const trus = "TRUSTWORTHINESS";
+  const fair = "FAIR PRACTICES";
+  const acc = "ACCOUNTABILITY";
+  const qul = "QUALITY ORIENTATION";
+
   return (
     <>
-    <section className="wrapper bg-soft-primary">
-      <HeadSection
+      <section className="wrapper bg-soft-primary">
+        <HeadSection
           header1="About Us"
           header2="A company turning ideas into beautiful things."
           imageUrl={aboutUs}
@@ -66,10 +78,8 @@ const AboutUs = () => {
                     <Typography variant="h6" component="div">
                       MISSION
                     </Typography>
-                    <Typography variant="body2">
-                      To offer worldwide types of assistance across businesses
-                      in a fair and entrusted way and construct a relationship
-                      with all partners while developing with development.
+                    <Typography variant="body2 h5">
+                      <CharaAnim text={mission} />
                     </Typography>
                   </CardContent>
                 </Card>
@@ -94,10 +104,8 @@ const AboutUs = () => {
                     <Typography variant="h6" component="div">
                       VISION
                     </Typography>
-                    <Typography variant="body2">
-                      To be the most respected and confided in organization
-                      universally that gives top tier business arrangements
-                      utilizing the most recent advancements.
+                    <Typography variant="body2 h4">
+                      <CharaAnim text={vision} />
                     </Typography>
                   </CardContent>
                 </Card>
@@ -122,13 +130,43 @@ const AboutUs = () => {
                     <Typography variant="h6" component="div">
                       VALUES
                     </Typography>
-                    <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
-                    <li><Icon icon="flat-color-icons:ok" /> Integrity</li>
-                    <li><Icon icon="flat-color-icons:ok" /> Trustworthiness</li>
-                    <li><Icon icon="flat-color-icons:ok" /> Fair practices</li>
-                    <li><Icon icon="flat-color-icons:ok" /> Accountability</li>
-                    <li><Icon icon="flat-color-icons:ok" /> Quality Orientation</li>
+                    <ul
+                      className="icon-list bullet-bg bullet-soft-primary mb-0"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "6px",
+                      }}
+                    >
+                      <li style={{ display: "flex", alignItems: "center" }}>
+                        <Icon icon="flat-color-icons:ok" />{" "}
+                        <CharaAnim text={int} />
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center" }}>
+                        <Icon icon="flat-color-icons:ok" />{" "}
+                        <CharaAnim text={trus} />
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center" }}>
+                        <Icon icon="flat-color-icons:ok" />{" "}
+                        <CharaAnim text={fair} />
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center" }}>
+                        <Icon icon="flat-color-icons:ok" />{" "}
+                        <CharaAnim text={acc} />
+                      </li>
+                      <li style={{ display: "flex", alignItems: "center" }}>
+                        <Icon icon="flat-color-icons:ok" />{" "}
+                        <CharaAnim text={qul} />
+                      </li>
                     </ul>
+
+                    {/* <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
+                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={int} /></li>
+                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={trus} /></li>
+                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={fair} /></li>
+                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={acc} /></li>
+                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={qul} /></li>
+                    </ul> */}
                   </CardContent>
                 </Card>
               </motion.div>
@@ -152,9 +190,8 @@ const AboutUs = () => {
                     <Typography variant="h6" component="div">
                       PHILOSOPHY
                     </Typography>
-                    <Typography variant="body2">
-                      The business reasoning of TechsoC is to lay accentuation
-                      on Human Values and Personal Relations.
+                    <Typography variant="body2 h3">
+                      <CharaAnim text={PHILOSOPHY} />
                     </Typography>
                   </CardContent>
                 </Card>
@@ -187,18 +224,16 @@ const AboutUs = () => {
           </div>
         </div>
         <hr className="double my-6" />
-        <PhotoShow/>
-        <div
-          className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center">
-             <motion.div
-                className="col-md-6 col-lg-4"
-                ref={ref1}
-                initial="hidden"
-                animate={inView1 ? "visible" : "hidden"}
-                variants={variants5}
-                transition={{ duration: 0.5 }}
-              >
-          
+        <PhotoShow />
+        <div className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center">
+          <motion.div
+            className="col-md-6 col-lg-4"
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={variants5}
+            transition={{ duration: 0.5 }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-950 0 2309.6 362.5"
@@ -232,13 +267,13 @@ const AboutUs = () => {
             </p>
           </motion.div>
           <motion.div
-                className="col-md-6 col-lg-4"
-                ref={ref1}
-                initial="hidden"
-                animate={inView1 ? "visible" : "hidden"}
-                variants={variants5}
-                transition={{ duration: 0.9}}
-              >
+            className="col-md-6 col-lg-4"
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={variants5}
+            transition={{ duration: 0.9 }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-1400 0 3509.6 582.5"
@@ -279,13 +314,13 @@ const AboutUs = () => {
           </motion.div>
 
           <motion.div
-                className="col-md-6 col-lg-4"
-                ref={ref1}
-                initial="hidden"
-                animate={inView1 ? "visible" : "hidden"}
-                variants={variants5}
-                transition={{ duration: 1.2 }}
-              >
+            className="col-md-6 col-lg-4"
+            ref={ref1}
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={variants5}
+            transition={{ duration: 1.2 }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-1100 0 2909.6 482.5"
@@ -316,8 +351,7 @@ const AboutUs = () => {
         </div>
       </div>
       <hr className="double my-8" />
-      </>
-    
+    </>
   );
 };
 

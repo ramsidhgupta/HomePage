@@ -26,9 +26,9 @@ const ValueVision = () => {
     hidden: { opacity: 1, y: -350 },
     visible: { opacity: 1, y: 0 },
   };
- const vision =  "To be the most respected and confided in organization universally that gives top tier business arrangements utilizing the most recent advancements."
- const mission = "To offer worldwide types of assistance across businesses ina fair and entrusted way and construct a relationship with all partners while developing with development."
-const PHILOSOPHY = "The business reasoning of TechsoC is to lay accentuation on Human Values and Personal Relations."
+  const vision =  "To be the most respected and confided in organization universally that gives top tier business arrangements utilizing the most recent advancements."
+  const mission = "To offer worldwide types of assistance across businesses ina fair and entrusted way and construct a relationship with all partners while developing with development."
+  const PHILOSOPHY = "The business reasoning of TechsoC is to lay accentuation on Human Values and Personal Relations."
 
 
   return (

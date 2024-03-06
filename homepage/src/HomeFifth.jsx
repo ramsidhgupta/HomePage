@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./HomeFifth.css";
+import { Icon } from "@iconify/react";
 
 
 const HomeFifth = () => {
@@ -23,7 +24,7 @@ const HomeFifth = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={5}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 5000 }}
           breakpoints={{
             480: {
               slidesPerView: 1,
@@ -57,7 +58,13 @@ const HomeFifth = () => {
             <div className="item-inner">
               <div ref={ref} className={`card ${inView ? "slideInUp1" : ""}`}>
                 <div className="card-body p-4 shadow">
-                  <span class="ratings five mb-3"></span>
+                  <span class="ratings five mb-3">
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  </span>
                   <blockquote class="icon mb-0">
                     <p>
                       “Huge ascent in usefulness from TechsoC group was huge,
@@ -75,7 +82,13 @@ const HomeFifth = () => {
             <div className="item-inner">
               <div ref={ref} className={`card ${inView ? "slideInUp2" : ""}`}>
                 <div className="card-body p-4 shadow">
-                  <span class="ratings five mb-3"></span>
+                <span class="ratings five mb-3">
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  </span>
                   <blockquote class="icon mb-0">
                     <p>
                       “The time and exertion by TechsoC group is simply
@@ -92,7 +105,13 @@ const HomeFifth = () => {
             <div className="item-inner">
               <div ref={ref} className={`card ${inView ? "slideInUp3" : ""}`}>
                 <div className="card-body p-4 shadow">
-                  <span class="ratings five mb-3"></span>
+                <span class="ratings five mb-3">
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  </span>
                   <blockquote class="icon mb-0">
                     <p>
                       “On account of TechsoC we can tape-out. I can't applaud
@@ -109,7 +128,13 @@ const HomeFifth = () => {
             <div className="item-inner">
               <div ref={ref} className={`card ${inView ? "slideInUp4" : ""}`}>
                 <div className="card-body p-4 shadow">
-                  <span class="ratings five mb-3"></span>
+                <span class="ratings five mb-3">
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  </span>
                   <blockquote class="icon mb-0">
                     <p>
                       “Much appreciated, your committed group commitment in
@@ -124,7 +149,13 @@ const HomeFifth = () => {
             <div className="item-inner">
               <div ref={ref} className={`card ${inView ? "slideInUp4" : ""}`}>
                 <div className="card-body p-4 shadow">
-                  <span class="ratings five mb-3"></span>
+                <span class="ratings five mb-3">
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  <Icon icon="openmoji:star" />
+                  </span>
                   <blockquote class="icon mb-0">
                     <p>
                       “Quality is generally there. Top of the game regarding

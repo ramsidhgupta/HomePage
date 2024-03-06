@@ -48,7 +48,12 @@ const EmpQuotes1 = () => {
 
   return (
     <>
-      
+      <div className="intro">
+          <h2 className="text-center fw-bold">Testimonials</h2>
+          <p className="text-center fw-bold">
+            Our employees love us! Read what they have to say below. 
+          </p>
+        </div>
         <Carousel
           responsive={responsive}
           swipeable={false}

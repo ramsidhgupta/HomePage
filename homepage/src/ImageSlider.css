@@ -18,23 +18,23 @@
 } 
 
 
-/* .container{
-    position:absolute!important;
-    height:100vh!important;
-    width:100%!important;
+.containerImage{
+    position:relative!important;
+    height:90vh!important;
+    width:90%!important;
     margin: 0 auto!important;
-} */
+}
 
 .heading {
     padding: 1rem 0;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .swiper_container {
-    margin-top:-3.5rem;
-    height: 90vh;
-    width: 80%;
+    margin-top:-12.5rem;
+    height: 95vh;
+    width: 95%;
     position: absolute;
 }
 
@@ -47,8 +47,8 @@
 
 /* .swiper-slide img {
     position: absolute;
-    width: 37rem;
-    height: 42rem;
+    width: 80rem;
+    height: 66rem;
     border-radius: 2rem;
     
 } */
