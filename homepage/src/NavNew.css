@@ -59,16 +59,21 @@ a{
     max-height: 40px;;
 }
 
+.navbar-nav > li {
+    float: left;
+    position: relative;
+  }
+
 .navbar .nav-link::before{
     content: ' ';
     position: absolute;
-    bottom: -10px;
+    bottom: 10px;
     left:0;
     right:0;
     margin-inline: auto;
     width:0%;
     height:2px;
-    background-color: black;
+    background-color: rgb(238, 12, 12);
     transition: all 0.6s ease;
     transform-origin: center;
 }
@@ -101,6 +106,9 @@ a{
     transform:translateX(50px);
     opacity:0;
 }
+
+
+
 
 
 .navbar-nav .nav-link {
