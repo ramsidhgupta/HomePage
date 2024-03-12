@@ -57,9 +57,6 @@ const ValueVision = () => {
                   </Typography>
                   <Typography variant="body2">
                   <CharaAnim text={mission} />
-                    {/* To offer worldwide types of assistance across businesses in
-                    a fair and entrusted way and construct a relationship with
-                    all partners while developing with development. */}
                   </Typography>
                 </CardContent>
               </Card>
@@ -86,9 +83,7 @@ const ValueVision = () => {
                   </Typography>
                   <Typography variant="body2">
                   <CharaAnim text={vision} />
-                    {/* To be the most respected and confided in organization
-                    universally that gives top tier business arrangements
-                    utilizing the most recent advancements. */}
+                    
                   </Typography>
                 </CardContent>
               </Card>
