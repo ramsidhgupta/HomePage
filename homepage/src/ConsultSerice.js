@@ -79,6 +79,7 @@ const ConsultSerice = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 409.6 356.2"
                 className="svg-inject icon-svg icon-svg-md mb-4"
+                height="64px"
               >
                 <path
                   className="lineal-fill"
@@ -129,6 +130,7 @@ const ConsultSerice = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 409.6 356.2"
                 className="svg-inject icon-svg icon-svg-md mb-4"
+                height="64px"
               >
                 <path
                   className="lineal-fill"

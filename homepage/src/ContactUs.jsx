@@ -10,6 +10,7 @@ import HeadSection from "./HeadSection";
 import contactUs from './assets/contact-us.jpg';
 
 
+
 const ContactUs = () => {
 
   const [formData, setFormData] = useState({
@@ -140,6 +141,7 @@ const ContactUs = () => {
                         </a>
                       </p>
                     </div>
+                    
                   </div>
                 </div>
               </div>
