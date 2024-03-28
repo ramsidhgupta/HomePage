@@ -1,0 +1,108 @@
+
+.CardContents{
+  --color:#110e0f;
+  --border-size:1rem;
+  --bg-color:lightblue;
+  position:relative;
+  background-color: lightblue;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  color:#fff;
+  display:grid;
+  place-content: center;
+  padding:1rem 1rem;
+  isolation: isolate;
+  overflow:hidden;
+  transition: background 0.5s;
+  background:rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0 ,0, 0.1);
+  backdrop-filter: blur(1px);
+}
+.CardContents:hover{
+  background:#ff01cf;
+}
+
+.CardContents::before,
+.CardContents::after{
+  content:"";
+  position: absolute;
+}
+
+.CardContents::before {
+  width:200%;
+  height:200%;
+  background-image:conic-gradient(var(--color) 0deg,
+      transparent 60deg,
+      transparent 180deg,
+      var(--color) 180deg,
+      transparent 240deg);
+    inset: -50%;
+    z-index:-2;
+    animation:border 8s linear infinite;
+  
+}
+.card-container-carrier{
+  position: relative;
+}
+
+.CardContents .img1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  border-radius: 50%;
+}
+.CardContents .equal-size{
+  height:12vh!important;
+  width:auto!important;
+}
+
+.CardContents .title{
+  text-align:center;
+  font-size:1.2rem;
+  line-height:1rem;
+  margin-block: 2rem 1rem;
+  color:var(--color);
+}
+
+
+@keyframes border{
+  to{
+    transform:rotateZ(-360deg);
+  }
+}
+.CardContents::after{
+  --inset:0.15rem;
+  background-color: #e2eeee;
+  inset:var(--inset);
+  border-radius: calc(var(--border-size) - var(--inset));
+  z-index: -1;
+  transition:all 0.35s linear;
+}
+
+.card-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 2fr));
+  gap:0.2em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .height-card-carrier {
+    height: 32vh!important;
+    width: 100%!important;
+  }

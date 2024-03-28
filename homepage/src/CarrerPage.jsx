@@ -9,6 +9,7 @@ import HeadSection from "./HeadSection";
 import carrier from "./assets/careers.jpg";
 import AwardShow from "./AwardShow";
 import EmpQuotes1 from "./EmpQuotes1";
+import CardCar from "./CardCar";
 
 import award1 from "./assets/award1.jpeg";
 import award2 from "./assets/award2.jpeg";
@@ -341,9 +342,11 @@ const CarrerPage = () => {
                     authority. Come assist with concocting what's to come!
                     Investigate our profession open doors.
                   </p>
+                  <CardCar/>
                 </div>
               </div>
               <hr class="double my-8" />
+             
               <div class="row gx-md-8 gy-8 my-5 my-md-5">
                 <motion.div
                   ref={ref3}
@@ -403,7 +406,7 @@ const CarrerPage = () => {
                 </div>
               </div>
 
-              <div class="row gy-6">
+              <div class="row gy-6" style={{marginTop:"7rem"}}>
                 <div className="col-md-12">
                   <div class="card shadow-lg lift h-100">
                     <div class="card-body p-5 d-flex flex-row">
