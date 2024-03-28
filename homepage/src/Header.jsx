@@ -8,6 +8,7 @@ import HomeSeventh from "./HomeSeventh";
 import HomeSixth from "./HomeSixth";
 import HomeThird from "./HomeThird";
 import HomeFirst from "./HomeFirst";
+import WhyTech from "./WhyTech";
 
 export const Header = () => {
   return (
@@ -19,6 +20,7 @@ export const Header = () => {
         <HomeFourth />
         <HomeFifth />
         <HomeSixth />
+        <WhyTech/>
         <HomeSeventh />
       </Layout>
     </>
