@@ -15,7 +15,7 @@ import award1 from "./assets/award1.jpeg";
 import award2 from "./assets/award2.jpeg";
 import award3 from "./assets/award3.jpeg";
 import award4 from "./assets/award4.jpeg";
-import award5 from "./assets/award5.jpeg";
+import award5 from "./assets/award5.jpg";
 import award6 from "./assets/award6.jpeg";
 import ImageSlider from "./ImageSlider";
 

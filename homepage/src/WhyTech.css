@@ -3,9 +3,16 @@
     margin: 0;
     padding: 1em;
     border: none;
-    border-top: 1px solid rgba(34, 36, 38, 0.1);
     box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+  
   }
+  
+  .life-at {margin: 20px 0; background: url(https://techsocind.com/assets/img/free/banner2.jpg) no-repeat center center fixed; background-size: cover; position: relative; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 300px; border-radius: 10px;}
+  .life-at:before{ background-color: rgba(0,0,0,.7); content: ''; position: absolute; left:0; top:0; width:100%; border-radius: 10px; height:100%;}
+  .life-at > div {position: relative; z-index: 2;}
+  .life-at * {color:#fff;}
   
   
   .solar-system {
@@ -279,8 +286,10 @@
   }
   
   .column {
-    margin-top: 2rem;
-    padding-left: 2rem;
+    /* margin-top: 2rem;
+    padding-left: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .column:hover {
@@ -293,7 +302,7 @@
   
   .column:hover .txt h1,
   .column:hover .txt p {
-    color: black;
+    color: #fff;
     /* color: rgba(255, 255, 255, 1); */
     opacity: 1;
   }
@@ -309,23 +318,29 @@
   }
   
   .txt {
-    margin-left: -3rem;
+    margin-left: 6rem;
     z-index: 1;
+    transition: ease-in-out 0.3s;
   }
   
   .txt h1 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .txt p {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0rem;
     margin-top: 33px;
     opacity: 0;
     color: rgba(255, 255, 255, 1);
+    transition: ease-in-out 0.3s;
   }
   
   .card-block a {
@@ -336,6 +351,8 @@
     bottom: 1rem;
     text-transform: uppercase;
     position: absolute;
+    transition: ease-in-out 0.3s;
+    
   }
   
   .card-block a:after {
@@ -352,13 +369,14 @@
   .ico-card {
     position: absolute;
     top: 25%;
-    left: 14%;
+    left: 25%;
     bottom: 0;
     right: 0;
-    width: 83%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     overflow: hidden;
   }
+  
   
   i {
     max-width: 400px;
@@ -369,19 +387,18 @@
     margin:0 auto;
     font-size: 2rem;
     line-height: 0;
-    opacity: 0.5;
+    opacity: 1;
     color: rgba(255, 255, 255, 1);
     z-index: -9999;
     overflow: hidden;
   }
-  
-  .page-background {
-    background-color: #f7f2f2d7;
+  .card-block:hover i {
+    display: none;
   }
   
   .equal-size {
-    height: 100% !important;
-    width: 100% !important;
+    height: 36vh !important;
+    width: 86% !important;
   }
   
   svg.svg-path path {
@@ -424,9 +441,26 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* background-image: url('./BackSvg.svg'); */
-    background-size: cover;
+    /* background-image: url('./BackSvg.svg');
+    background-size: cover; */
     background-position: center;
     /* Adjust other background properties as needed */
   }
   
+  .equal-height {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .equal-height .card {
+    flex: 1;
+  }
+  
+  .card-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0 60px 0 rgba(72, 86, 100, 0.5);
+  }
+  
+  .card-block:hover h4 a {
+    color: #014C7A;
+  }

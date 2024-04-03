@@ -161,13 +161,7 @@ const AboutUs = () => {
                       </li>
                     </ul>
 
-                    {/* <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
-                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={int} /></li>
-                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={trus} /></li>
-                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={fair} /></li>
-                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={acc} /></li>
-                    <li><Icon icon="flat-color-icons:ok" /> <CharaAnim text={qul} /></li>
-                    </ul> */}
+                   
                   </CardContent>
                 </Card>
               </motion.div>
@@ -226,8 +220,8 @@ const AboutUs = () => {
         </div>
         <hr className="double my-6" />
         <PhotoShow />
-        <TimeLine/>
-        <div className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-15 text-center">
+        {/* <TimeLine/> */}
+        <div className="row gx-lg-8 gx-xl-12 gt-6 gy-md-0 mt-4 text-center">
           <motion.div
             className="col-md-6 col-lg-4"
             ref={ref1}
