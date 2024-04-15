@@ -57,6 +57,14 @@ const CarrerPage = () => {
   });
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [isQualificationSelected, setIsQualificationSelected] = useState(false);
+  const [isExperienceSelected, setIsExperienceSelected] = useState(false);
+  const [isRoleSelected, setIsRoleSelected] = useState(false);
+
+  const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,14 +72,17 @@ const CarrerPage = () => {
   };
   const handleSelectQual = (value) => {
     setFormData({ ...formData, qualification: value });
+    setIsQualificationSelected(true);
   };
 
   const handleSelectExp = (value) => {
     setFormData({ ...formData, experience: value });
+    setIsExperienceSelected(true);
   };
 
   const handleSelectRole = (value) => {
     setFormData({ ...formData, role: value });
+    setIsRoleSelected(true);
   };
 
   const handleFileChange = (e) => {
@@ -96,6 +107,20 @@ const CarrerPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isQualificationSelected || !isExperienceSelected || !isRoleSelected) {
+      let errorMessage = '';
+      if (!isQualificationSelected) {
+        errorMessage += 'Please select your qualification.\n';
+      }
+      if (!isExperienceSelected) {
+        errorMessage += 'Please select your experience.\n';
+      }
+      if (!isRoleSelected) {
+        errorMessage += 'Please select your role.';
+      }
+      alert(errorMessage);
+    } else {
+
     try {
       const response = await axios.post(
         // "http://localhost:3001/api/submitForm",
@@ -125,6 +150,7 @@ const CarrerPage = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
     }
+  }
   };
 
   const closePopup = () => {
@@ -343,11 +369,11 @@ const CarrerPage = () => {
                     authority. Come assist with concocting what's to come!
                     Investigate our profession open doors.
                   </p>
-                  <CardCar/>
+                  <CardCar />
                 </div>
               </div>
               <hr class="double my-8" />
-             
+
               <div class="row gx-md-8 gy-8 my-5 my-md-5">
                 <motion.div
                   ref={ref3}
@@ -407,7 +433,7 @@ const CarrerPage = () => {
                 </div>
               </div>
 
-              <div class="row gy-6" style={{marginTop:"7rem"}}>
+              <div class="row gy-6" style={{ marginTop: "7rem" }}>
                 <div className="col-md-12">
                   <div class="card shadow-lg lift h-100">
                     <div class="card-body p-5 d-flex flex-row">
@@ -492,23 +518,23 @@ const CarrerPage = () => {
         </div>
       </section>
       {/* <section class="wrapper bg-light"> */}
-        <div class="container pt-17 pt-md-17 pb-10 pb-md-0 pt-xs-17">
-          <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
-            <div class="col">
-              <ImageSlider
-                images={images}
-                titles={titles}
-                descriptions={descriptions}
-                links={links}
-              />
-            </div>
-          </div>
-          <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
-            <div class="col">
-              <EmpQuotes1 />
-            </div>
+      <div class="container pt-17 pt-md-17 pb-10 pb-md-0 pt-xs-17">
+        <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
+          <div class="col">
+            <ImageSlider
+              images={images}
+              titles={titles}
+              descriptions={descriptions}
+              links={links}
+            />
           </div>
         </div>
+        <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-md-10 mb-3">
+          <div class="col">
+            <EmpQuotes1 />
+          </div>
+        </div>
+      </div>
       {/* </section> */}
       <hr className="double my-6" />
       <section>
@@ -557,22 +583,27 @@ const CarrerPage = () => {
                       <div class="col-md-6">
                         <div class="form-floating mb-4">
                           <input
-                            id="name"
                             type="text"
+                            className={`form-control border-0 ${
+                              formData.name.length === 0
+                                ? "is-invalid"
+                                : "is-valid"
+                            }`}
+                            // className="form-control border-0"
+                            id="name"
                             name="name"
-                            class="form-control border-0"
-                            placeholder="Jane"
                             value={formData.name}
                             onChange={handleChange}
                             required="required"
-                            data-error="First Name is required."
+                            title="First Name is required."
                           />
                           <label htmlFor="name">Name *</label>
                           <div class="valid-feedback"> Looks good! </div>
-                          <div class="invalid-feedback">
-                            {" "}
-                            Please enter your name.{" "}
-                          </div>
+                          {formData.name.length === 0 && (
+                            <div className="invalid-feedback">
+                              Please enter your name.
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -581,21 +612,33 @@ const CarrerPage = () => {
                             id="email"
                             type="email"
                             name="email"
-                            class="form-control border-0"
-                            placeholder="jane.doe@example.com"
+                            className={`form-control border-0 ${
+                              formData.email.trim() === "" ||
+                              !isEmailValid(formData.email)
+                                ? "is-invalid"
+                                : "is-valid"
+                            }`}
                             required="required"
                             value={formData.email}
                             onChange={handleChange}
-                            data-error="Valid email is required."
                           />
                           <label htmlFor="email" className="form-label">
                             Email *
                           </label>
-                          <div class="valid-feedback"> Looks good! </div>
-                          <div class="invalid-feedback">
-                            {" "}
-                            Please provide a valid email address.{" "}
-                          </div>
+                          {formData.email.trim() === "" && (
+                            <div className="invalid-feedback">
+                              Please provide an email address.
+                            </div>
+                          )}
+                          {!isEmailValid(formData.email) && (
+                            <div className="invalid-feedback">
+                              Please provide a valid email address.
+                            </div>
+                          )}
+                          {formData.email.trim() !== "" &&
+                            isEmailValid(formData.email) && (
+                              <div className="valid-feedback">Looks good!</div>
+                            )}
                         </div>
                       </div>
                       <div class="col-12">
@@ -603,7 +646,11 @@ const CarrerPage = () => {
                           <textarea
                             id="message"
                             name="message"
-                            class="form-control border-0"
+                            className={`form-control border-0 ${
+                              formData.message.trim() === ""
+                                ? "is-invalid"
+                                : "is-valid"
+                            }`}
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Your message"
@@ -613,11 +660,14 @@ const CarrerPage = () => {
                           <label htmlFor="message" className="form-label">
                             Message *
                           </label>
-                          <div class="valid-feedback"> Looks good! </div>
-                          <div class="invalid-feedback">
-                            {" "}
-                            Please enter your messsage.{" "}
-                          </div>
+                          {formData.message.trim() === "" && (
+                            <div className="invalid-feedback">
+                              Please enter your message.
+                            </div>
+                          )}
+                          {formData.message.trim() !== "" && (
+                            <div className="valid-feedback">Looks good!</div>
+                          )}
                         </div>
                       </div>
                       <div className="col-md-4">
@@ -629,7 +679,8 @@ const CarrerPage = () => {
                             name="qualification"
                             aria-label="Qualification *"
                             aria-describedby="qualification-dropdown"
-                            required="required"
+                           
+                            readOnly
                             value={formData.qualification}
                             onChange={handleChange}
                           />
@@ -675,10 +726,7 @@ const CarrerPage = () => {
                               </button>
                             </li>
                           </ul>
-                          <div className="valid-feedback">Looks good!</div>
-                          <div className="invalid-feedback">
-                            Please select your qualification.
-                          </div>
+                         
                         </div>
                       </div>
                       <div className="col-md-4">
