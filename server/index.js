@@ -112,7 +112,7 @@ app.post(
 
     const mailOptions = {
       from: {email},
-      to: "ramsidh@techsocind.com",
+      to: "hr@techsocind.com",
       subject: "New Candidate Form Submission for Job Position",
       text: `
       Name: ${name}
@@ -165,7 +165,7 @@ app.post(
 
     const mailOptions = {
       from: {email},
-      to: "ramsidh@techsocind.com",
+      to: "hr@techsocind.com",
       subject: "New Contact Form Submission",
       text: `
       First Name: ${firstname}
