@@ -189,6 +189,120 @@ app.post(
   }
 );
 
+
+app.post(
+  '/api/submitFormEmbedded',
+  
+  (req, res) => {
+    const { name, email, message, JobTitle, CompanyName, PhoneNo, Date, country, selectedServices } = req.body;
+    console.log("Form data received: In ValidFormData");
+    console.log("First Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+    console.log("Country:", country);
+    console.log("Phone No:", PhoneNo);
+
+    console.log("Company Name:", CompanyName);
+    console.log("Job Title:", JobTitle);
+    console.log("Services Selected:", selectedServices);
+
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      port: 465,
+      secure: true,
+      auth: {
+        user: mailG,
+        pass: passG,
+      },
+    });
+
+    const mailOptions = {
+      from: `${email}`,
+      to: "ramsidh@techsocind.com",
+      cc:"hr@Techsocind.com",
+      subject: "New Embedded Services Enquiry Form Submission",
+      html: `
+    <html>
+    <head>
+      <style>
+        body {
+          
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+        .container {
+          width: 80%;
+          margin: 0 auto;
+          padding: 20px;
+          border: 3px solid #ccc;
+          border-radius: 10px;
+          background-color: #f9f9f9;
+        }
+        .heading {
+          text-align: center;
+          color: #333;
+        }
+        .details {
+          margin-top: 20px;
+        }
+        .details p {
+          margin: 5px 0;
+        }
+        .services {
+          margin-top: 20px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          background-color: #1268b3;
+          color:#fff;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1 class="heading">New Embedded Services Enquiry Form Submission</h1>
+        <div class="details">
+          <p><strong>My Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Country Origin:</strong> ${country}</p>
+          <p><strong>My Phone No:</strong> ${PhoneNo}</p>
+          <p><strong>My Company Name:</strong> ${CompanyName}</p>
+          <p><strong>My Role:</strong> ${JobTitle}</p>
+          <p><strong>Scheduled Call Date:</strong> ${Date}</p>
+        </div>
+        <div class="services">
+          <h2>Services Chosen</h2>
+          <pre>${JSON.stringify(selectedServices, null, 2)}</pre>
+        </div>
+        <div class="services">
+          <h2>My message</h2>
+          <pre>${message}</pre>
+        </div>
+      </div>
+    </body>
+    </html>
+  `,
+};
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        res.status(500).json({ error: "Failed to send email from server" });
+      } else {
+        console.log("Email sent:", info.response);
+        res.status(200).json({ message: "Email sent successfully from server" });
+      }
+    });
+  
+  
+        
+   }
+);
+
+
+
+
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'))
 })
