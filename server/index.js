@@ -219,8 +219,7 @@ app.post(
 
     const mailOptions = {
       from: `${email}`,
-      to: "ramsidh@techsocind.com",
-      cc:"hr@Techsocind.com",
+      to: "hr@Techsocind.com",
       subject: "New Embedded Services Enquiry Form Submission",
       html: `
     <html>
