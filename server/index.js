@@ -95,6 +95,9 @@ app.post(
         user: mailG,
         pass: passG,
       },
+      tls: {
+        rejectUnauthorized: false // Ignore self-signed certificate errors
+    }
     });
 
     const mailOptions = {
@@ -140,7 +143,7 @@ app.post(
     </head>
     <body>
       <div class="container">
-        <h1 class="heading">New Embedded Services Enquiry Form Submission</h1>
+        <h1 class="heading">New Candidate Form Submission for Job Position</h1>
         <div class="details">
           <p><strong>My Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
@@ -189,6 +192,9 @@ app.post("/api/submitFormEnq", validateFormDateEnq, (req, res) => {
       user: mailG,
       pass: passG,
     },
+    tls: {
+      rejectUnauthorized: false // Ignore self-signed certificate errors
+  }
   });
 
   const mailOptions = {
